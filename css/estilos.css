@@ -1,0 +1,957 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+/*Contenedor*/
+
+.contenedor{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+/*Fila*/
+.fila{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*Fondo general*/
+body{
+	background-image: url("../images/fondogen.jpg");
+	background-size: 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/*Menu hamburguesa ------------------------------------------------------------------------------------------------------------------*/
+nav{
+	display: flex;
+  }
+
+.menu{
+   list-style: none;
+   display: flex;
+   justify-content: space-around;
+   background: #9a4f52;
+}
+
+.menu li{
+    padding: 10px;
+  }
+
+.menu li:hover{
+    background: #a45d5f;
+}
+
+.menu li a{
+    color: #e8c4c4;
+    text-decoration: none;
+    display: block;
+}
+
+.menu li a:hover{
+   color: blanchedalmond;
+}
+
+
+.menu-icon{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+}
+
+  #menu-toggle{
+    display: none; 
+}
+  
+/*Para pantallas extrapequeñas debe aparecer el menu hamburguesa*/
+
+@media(max-width:767px){
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /*Simbolo del menu*/
+    .menu-icon{
+        display: block;
+        color: #5d3333;
+        background-color: #9a4f52;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu{
+        display: flex;
+    }
+
+    .menu li{
+        text-align: center;
+        border-bottom: 1px solid #9b5c5c;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Formatos titulos y texto ----------------------------------------------------------------------------------------------------------*/
+
+/*Nombre proyecto*/
+.nombreproy{
+	font-family: Bilbo Swash Caps;
+	font-size: 30px;
+	margin-left: 45px;
+	padding: 10px;
+	color: #fff8f8;
+}
+
+/*Pie de pagina*/
+.piepag{
+	font-family: Oregano;
+	font-size: 22px;
+	text-align: center;
+	padding: 10px;
+	color: #bbad9c;
+}
+
+/*Menu*/
+.fmenu{
+	font-family: Bilbo Swash Caps;
+	font-size: 22px;
+	text-align: center;
+	padding: 5px;
+	color: #e8c4c4;
+}
+
+/*Parrafos*/
+.parrafos{
+	font-family: Oregano;
+	font-size: 20px;
+	text-align: justify;
+	padding: 20px;
+	color: #947850;
+	margin: auto;
+	background: #f6eee6;
+	border-radius: 5px;
+}
+
+/*Titulos de las paginas*/
+.titulos{
+	font-family: Bilbo Swash Caps;
+	font-size: 35px;
+	color: #44231c;
+	padding: 10px;
+	text-align: center;
+}
+
+/*Subtitulos de las pags*/
+.subtitulos{
+	font-family: Bilbo Swash Caps;
+	font-size: 30px;
+	color: #725149;
+	text-align: left;
+	padding: 15px;
+}
+
+
+/*Titulos cards*/
+.card h2{
+	font-family: Oregano;
+	text-align: center;
+	color: #44231c;
+	padding: 8px;
+}
+
+/*Textos cards*/
+.card p{
+	font-family: Oregano;
+	text-align: justify;
+	padding: 15px;
+	color: #947850;
+}
+
+/*Parrafo palabras para la memoria*/
+.parrafop{
+	font-family: Oregano;
+	font-size: 20px;
+	text-align: justify;
+	padding: 20px;
+	color: #9b7f66;
+	margin: auto;
+	background: #e6d4c4;
+	border-radius: 5px;
+}
+
+/*Subtitulo de parrafos especiales (con colores distintos al parrafo normal)*/
+.subtituloh{
+	font-family: Oregano;
+	font-size: 21px;
+	color: #fffef5;
+}
+
+/*Parrafos especiales (con colores distintos al parrafo normal)*/
+.parrafosai{
+	font-family: Oregano;
+	font-size: 16px;
+	color: #fffef5;
+}
+
+/*Titulos cards expediente perdido*/
+.cardt h2{
+	font-family: Oregano;
+	text-align: center;
+	color: #44231c;
+	padding: 8px;
+}
+
+/*Textos cards expediente perdido*/
+.cardt p{
+	font-family: Oregano;
+	text-align: justify;
+	padding: 12px;
+	color: #947850;
+}
+
+/*Subtitulo que pasaria si*/
+.subtituloq{
+	font-family: Bilbo Swash Caps;
+	font-size: 35px;
+	color: #724d49;
+	padding: 5px;
+	text-align: center;
+}
+
+/*Subtitulo que pasaria si --> comencemos*/
+.subtituloc{
+	font-family: Oregano;
+	font-size: 35px;
+	color: #fffef5;
+	padding: 5px;
+	text-align: center;
+}
+
+/*Botones que pasaria si*/
+.botquep{
+	font-family: Oregano;
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+	color: #fffef5;
+	margin: 70px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Formato footer*/
+.ffooter{
+	background: #ecdfce;
+	display: flex;
+	justify-content: center; /* centra horizontalmente*/
+	align-items: center; /* centra verticalmente*/
+}
+
+/*Formato icono proyecto (en el pie de pagina)*/
+.iconop{
+	width: 15%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+/*Formato columna espacio*/
+.espacio{
+	padding: 10px;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*Formato formularios*/
+.formulario{
+	background: #e6d4c4;
+	color: #6b5f54; 
+	font-family: Oregano;
+	text-align: center;
+}
+
+/*Index ----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Color barra superior*/
+.barrasup{
+	background: #642226;
+}
+
+/*Formato botón contacto*/
+.botcontacto{
+	width: 40%;
+	display: block;
+	margin-left: auto;
+}
+
+
+/*Formato botones menu*/
+.botsnav{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Para que los botones queden centrados (especialmente los de los lados del logo)*/
+nav .col-lg-2, .col-lg-1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Animacion de botones*/
+.botoni:hover{
+	transform: scale(1.5);
+}
+
+/*Formato logo*/
+.logop{
+	width: 100%;
+	float: left;
+}
+
+/*Formato cuadro con párrafo*/
+.parriba{
+	margin-top: 15px;
+}
+
+/*Formato de libros*/
+.dlibros{
+	width: 80%;
+	max-width: 300px;
+	height: auto;
+	padding: 10px;
+}
+
+/*Para centrar libros*/
+.centrarlibros{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Contacto ----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Contenedor de cards*/
+.card-container{
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/*Formato cards*/
+.card{
+	width: 70%;
+	height: auto;
+	background: #f8f4f0;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	box-shadow: 0.8px 9px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+/*Animacion de cards*/
+.card:hover{
+	transform: scale(1.05);
+}
+
+/*Efecto de desaturacion de la imagen del boton contacto*/
+.botcontacto {
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+.botcontacto:hover {
+  filter: grayscale(100%);
+}
+
+/*Formato imagenes cards*/
+.card img:not(.redessociales){
+	width: 70%;
+	height: 180px;
+	object-fit: cover;
+	padding: 10px;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Contenedor redes sociales*/
+.rs-container{
+	text-align: center;
+}
+
+/*Formato iconos de redes sociales*/
+.redessociales{
+	width: 30px;
+	height: auto;
+	margin: 10px;
+	display: inline-block;
+	margin-bottom: 18px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Palabras para la memoria -------------------------------------------------------------------------------------------------------------------*/
+
+/*Contenedor de mensajes*/
+.mensajes-container{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+/*Formato cinta*/
+.cinta{
+	display: flex;
+	width: max-content;
+	gap: 15px;
+	transition: transform 0.3s ease;
+}
+
+/*Formato de imagenes de la cinta*/
+.cinta img{
+	height: 360px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	pointer-events: auto; /* Para que detecte el hover*/
+}
+
+/*Fondo collage*/
+.fondocollage{
+	background-image: url("../images/collage.png");
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Galeria -----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Formato camara*/
+.camara{
+	display: block;
+	margin: auto;
+	width: 20%;
+}
+
+/*Contenedor de galeria*/
+.galeria-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/*Elementos de la galeria*/
+.itemg{
+  width: calc(25% - 20px);
+  min-width: 220px;
+  background: #b6a28a;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.itemg img, .itemg iframe {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border: none;
+  border-radius: 5px;
+}
+
+/*Animacion de elementos galeria*/
+.itemg:hover{
+	transform: scale(1.1);
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Historia y Justicia --------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Parrafo actores involucrados*/
+.pactores{
+	background: #795f43;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+}
+
+/*Parrafo impacto inmediato*/
+.pimpacto{
+	background: #d6b586;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+}
+
+/*Imagenes comentarios/criticas*/
+.comentarios{
+	width: 100%;
+	padding: 5px;
+}
+
+/*Imagen*/
+.imagenh{
+	width: 100%;
+	height: 310px;
+	margin-top: 4px;
+	padding: 15px;
+}
+
+/*Animacion de imagen*/
+.imagenh:hover{
+	transform: scale(1.02);
+}
+
+/*Video*/
+.videoh{
+	width: 100%;
+	padding: 15px;
+}
+
+/*Iconos organizaciones*/
+.orgs{
+	width: 100%;
+	padding: 15px;
+}
+
+/*Color texto hipervinculos*/
+.colorh{
+	color: #4b3121;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Voces del Palacio --------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Frases*/
+.frases{
+	width: 100%;
+}
+
+/*Megafono*/
+.megafono{
+	width: 80%;
+}
+
+/*Animacion de frases*/
+.frases:hover{
+	transform: scale(1.3);
+}
+
+/*Reflexion uno*/
+.reflexionu{
+	background: #795f43;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+}
+
+/*Reflexion dos*/
+.reflexiond{
+	background: #d6b586;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 15px;
+}
+
+/*Reflexion tres*/
+.reflexiont{
+	background: #dfc49f;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+}
+
+/*Imagenes*/
+.imagenesv{
+	width: 100%;
+	height: 85%;
+	padding: 10px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Expediente perdido --------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Caja de cronologia*/
+.cronologia{
+	background: #795f43;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+}
+
+/*Caja de informes*/
+.informes{
+	background: #d6b586;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 15px;
+}
+
+/*Acordeon (usando chatgpt) ----------*/
+
+/*Formato arcordeon uno*/
+
+.acordeon {
+  width: 100%;
+  background-color: #795f43;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/*Formato encabezado acordeon uno*/
+.acordeon-header {
+  padding: 16px;
+  color: white;
+}
+
+/*Formato parte inferior acordeon uno*/
+.acordeon-footer {
+  background-color: #a8937b;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Formato del contenido del cajon uno*/
+
+.acordeon-contenido {
+  background-color:#a8937b;
+  color: #333;
+  padding: 12px 16px;
+  display: none; /* Oculto por defecto */
+}
+
+/*Formato del acordeon dos*/
+
+.acordeondos {
+  width: 100%;
+  background-color: #d6b586;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/*Formato encabezado acordeon dos*/
+.acordeond-header {
+  padding: 16px;
+  color: white;
+}
+
+/*Formato parte inferior acordeon dos*/
+.acordeond-footer {
+  background-color: #d8c5a9;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Formato del contenido del cajon dos*/
+.acordeond-contenido {
+  background-color: #d8c5a9;
+  color: #333;
+  padding: 12px 16px;
+  display: none; /* Oculto por defecto */
+}
+
+/*Para centrar acordeones*/
+.acordeon, .acordeondos {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-----------------------------------------*/
+
+/*Formato cards*/
+.cardt{
+	width: 70%;
+	height: auto;
+	background: #f8f4f0;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	box-shadow: 0.8px 9px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+/*Animacion de cards*/
+.cardt:hover{
+	transform: scale(1.05);
+}
+
+/*Formato imagenes cards*/
+.cardt img{
+	width: 100%;
+	height: 190px;
+	object-fit: cover;
+	padding: 10px;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Formato boton cards*/
+.btn{
+	display: inline-block;
+	margin: 10px 50px;
+	padding: 5px 20px;
+	background: #d1b9a3;
+	color: #897360;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 20px;
+	font-family: Oregano;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+/*Animacion al pasar mouse sobre cards*/
+.btn:hover{
+	background-color: #664f45;
+}
+
+/*Para centrar videos*/
+.videost{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Que pasaria si ---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Formato de subtitulo comencemos*/
+.comencemos{
+	background: #b4825b;
+	border-radius: 5px;
+}
+
+/*Boton uno*/
+.botquepu{
+	background: #795f43;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+	overflow: hidden;
+	box-shadow: 0.8px 9px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+/*Boton dos*/
+.botquepd{
+	background: #d6b586;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+	overflow: hidden;
+	box-shadow: 0.8px 9px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+/*Boton tres*/
+.botquept{
+	background: #dfc49f;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 15px;
+	text-align: center;
+	overflow: hidden;
+	box-shadow: 0.8px 9px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+/*Para centrar botones*/
+.botonesq{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+/*Animacion de botones*/
+.botquepu:hover{
+	background-color: #5b4134;
+}
+.botquepd:hover{
+	background-color: #5b4134;
+}
+.botquept:hover{
+	background-color: #5b4134;
+}
+
+/*Galeria slider de arrastrar (usando chatgpt) ------------------------*/
+
+.sliderq {
+  overflow-x: scroll;
+  width: 95%;
+  height: auto;
+  cursor: grab;
+  border-radius: 5px;
+  overflow-y: hidden;
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;     /* Firefox */
+  cursor: grab;
+  padding: 10px;
+}
+
+.slider-trackq {
+  display: flex;
+  transition: transform 0.7s ease;
+  width: max-content;
+}
+
+.slider-trackq img {
+  width: 550px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 5px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/*Para centrar las galerias*/
+.contcontexto {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 100%;            /* Asegúrate de que el contenedor tenga altura */
+  padding: 2rem;
+}
+
+.contextogaleria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/*-------------------------------------------------------------------------*/
+
+/*Juego de cartas (usando chatgpt) ----------------------------------------*/
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*==========Agrupamiento==========*/
+
+[class*="col-"]{
+	border: 1px solid black; /*A esto solo se le pone 0px, si se borra se daña todo...*/
+	}
+
+/*==============================*/
+
+/*PANTALLAS GRANDES - lg*/
+@media(min-width: 1200px){
+	.col-lg-12{width: 100%;}
+	.col-lg-11{width: 91.66666667%;}
+	.col-lg-10{width: 83.33333333%;}
+	.col-lg-9{width: 75%;}
+	.col-lg-8{width: 66.66666667%;}
+	.col-lg-7{width: 58.33333333%;}
+	.col-lg-6{width: 50%;}
+	.col-lg-5{width: 41.66666667%;}
+	.col-lg-4{width: 33.33333333%;}
+	.col-lg-3{width: 25%;}
+	.col-lg-2{width: 16.66666667%;}
+	.col-lg-1{width: 8.33333333%;}
+/*Clase para ubicar 5 elementos en una fila*/
+    .col-lg-20{width: 20%;}
+}
+
+/*PANTALLAS MEDIANAS - md*/
+@media(max-width: 1199px) and (min-width: 992px){
+	.col-md-12{width: 100%;}
+	.col-md-11{width: 91.66666667%;}
+	.col-md-10{width: 83.33333333%;}
+	.col-md-9{width: 75%;}
+	.col-md-8{width: 66.66666667%;}
+	.col-md-7{width: 58.33333333%;}
+	.col-md-6{width: 50%;}
+	.col-md-5{width: 41.66666667%;}
+	.col-md-4{width: 33.33333333%;}
+	.col-md-3{width: 25%;}
+	.col-md-2{width: 16.66666667%;}
+	.col-md-1{width: 8.33333333%;}
+/*Clase para ubicar 5 elementos en una fila*/
+    .col-md-20{width: 20%;}
+}
+
+/*PANTALLAS PEQUEÑAS - sm*/
+@media(max-width: 991px) and (min-width: 768px){
+	.col-sm-12{width: 100%;}
+	.col-sm-11{width: 91.66666667%;}
+	.col-sm-10{width: 83.33333333%;}
+	.col-sm-9{width: 75%;}
+	.col-sm-8{width: 66.66666667%;}
+	.col-sm-7{width: 58.33333333%;}
+	.col-sm-6{width: 50%;}
+	.col-sm-5{width: 41.66666667%;}
+	.col-sm-4{width: 33.33333333%;}
+	.col-sm-3{width: 25%;}
+	.col-sm-2{width: 16.66666667%;}
+	.col-sm-1{width: 8.33333333%;}
+}
+
+/*PANTALLAS EXTRAPEQUEAOS - xs*/
+@media(max-width: 767px){
+	.col-xs-12{width: 100%;}
+	.col-xs-11{width: 91.66666667%;}
+	.col-xs-10{width: 83.33333333%;}
+	.col-xs-9{width: 75%;}
+	.col-xs-8{width: 66.66666667%;}
+	.col-xs-7{width: 58.33333333%;}
+	.col-xs-6{width: 50%;}
+	.col-xs-5{width: 41.66666667%;}
+	.col-xs-4{width: 33.33333333%;}
+	.col-xs-3{width: 25%;}
+	.col-xs-2{width: 16.66666667%;}
+	.col-xs-1{width: 8.33333333%;}
+}
