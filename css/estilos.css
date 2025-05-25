@@ -190,6 +190,8 @@ nav{
 	border-radius: 5px;
 }
 
+
+
 /*Subtitulo de parrafos especiales (con colores distintos al parrafo normal)*/
 .subtituloh{
 	font-family: Oregano;
@@ -1007,6 +1009,25 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
   font-size: 16px;
 }
 
+/*Boton de cerrar popup*/
+
+.cerrar{
+	padding: 15px;
+	font-size: 20px;
+	color: #9b7f66;
+	margin: auto;
+	background: #e6d4c4;
+	border-radius: 5px;
+}
+
+.cerrar:hover{
+	background: #795f43;
+}
+
+.popup-contenido button {/*Elimina borde del boton de cerrar*/
+  border: none;
+}
+
 
 /*-------------------------------------------------------------------------*/
 
@@ -1017,7 +1038,7 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 
 [class*="col-"]{
 	border: 1px solid black; /*A esto solo se le pone 0px, si se borra se daña todo...*/
-	}
+}
 
 /*==============================*/
 
