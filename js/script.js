@@ -1,6 +1,6 @@
 // Animación de mensajes (usando ChatGPT) ------------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
+function inicializaranimacionmensajes(){
   const cinta = document.querySelector('.cinta');
 
   // Duplicar imágenes para crear bucle infinito
@@ -40,7 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   moverCinta();
-});
+}
+
+
+
 
 //-------------------------------------------------------------------------------------------------------
 
@@ -48,7 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
 //Cajas de texto tipo acordeon (usando chatgpt) ---------------------------------------------------------
 
 //acordeon uno
-document.addEventListener('DOMContentLoaded', () => {
+function inicializaracordeonuno(){
+
   const footers = document.querySelectorAll('.acordeon-footer');
 
   footers.forEach(footer => {
@@ -61,10 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
       flecha.textContent = visible ? '▼' : '▲';
     });
   });
-});
+}
+
+
 
 //acordeon dos
-document.addEventListener('DOMContentLoaded', () => {
+function inicializaracordeondos(){
   const footers = document.querySelectorAll('.acordeond-footer');
 
   footers.forEach(footer => {
@@ -77,7 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
       flecha.textContent = visible ? '▼' : '▲';
     });
   });
-});
+}
+
+
+
 
 
 //----------------------------------------------------------------------------------------------------------
@@ -214,9 +223,16 @@ function inicializarJuegoCartas() {
   });
 }
 
+/*Esto es semejante a lo que hace un Start()
+por eso con cada parte de codigo se convierte 
+en una funcion para poder inicializarla aqui*/
+
 document.addEventListener("DOMContentLoaded", () => {
   inicializarJuegoCartas();
   inicializargaleriaslider();
+  inicializaracordeonuno();
+  inicializaracordeondos();
+  inicializaranimacionmensajes();
 });
 
 //----------------------------------------------------------------------------------------------------------
