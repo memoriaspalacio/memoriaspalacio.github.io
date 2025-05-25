@@ -890,7 +890,7 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 /*==========Agrupamiento==========*/
 
 [class*="col-"]{
-	border: 1px solid black; /*A esto solo se le pone 0px, si se borra se daña todo...*/
+	/*border: 1px solid black; /*A esto solo se le pone 0px, si se borra se daña todo...*/
 	}
 
 /*==============================*/
