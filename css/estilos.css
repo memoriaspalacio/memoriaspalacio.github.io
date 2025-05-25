@@ -912,7 +912,6 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 	transition: transform 0.6s;
   transform-style: preserve-3d;
   cursor: pointer;
-  position: relative;
 }
 
 /* Al hacer clic se aplica esta clase para girar */
@@ -934,7 +933,9 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 
 /* Reverso (por defecto visible) */
 .carta::before {
-  background-color: #c0906b; /* reverso */
+  background-image: url('../images/reversouno.png');/* reverso */
+  background-size: cover;
+  background-position: center;
 }
 
 /*Frente (la imagen o símbolo de la carta) */
@@ -943,44 +944,44 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
   transform: rotateY(180deg); /* escondido al inicio */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* Imágenes diferentes según el data-pareja */
 .carta[data-pareja="1"]::after {
-  /*background-image: url('../images/ave1.jpg');*/
+  background-image: url('../images/cartauno.png');
+
 }
 
 .carta[data-pareja="2"]::after {
-  background-image: url('../images/ave2.jpg');
+  background-image: url('../images/cartados.png');
 }
 
 .carta[data-pareja="3"]::after {
-  background-image: url('../images/ave3.jpg');
+  background-image: url('../images/cartatres.png');
 }
 
 .carta[data-pareja="4"]::after {
-  background-image: url('../images/ave2.jpg');
+  background-image: url('../images/cdosuno.png');
 }
 
 .carta[data-pareja="5"]::after {
-  background-image: url('../images/ave3.jpg');
+  background-image: url('../images/cdosdos.png');
 }
 
 .carta[data-pareja="6"]::after {
-  background-image: url('../images/ave1.jpg');
+  background-image: url('../images/cdostres.png');
 }
 
 .carta[data-pareja="7"]::after {
-  background-image: url('../images/ave2.jpg');
+  background-image: url('../images/ctresuno.png');
 }
 
 .carta[data-pareja="8"]::after {
-  background-image: url('../images/ave1.jpg');
+  background-image: url('../images/ctresdos.png');
 }
 
 .carta[data-pareja="9"]::after {
-  background-image: url('../images/ave3.jpg');
+  background-image: url('../images/ctrestres.png');
 }
 
 /*Popups para mensajes*//*Hecho con chatgpt*/
@@ -998,14 +999,13 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 }
 
 .popup-contenido {
-  background-color: white;
+  background: #f6eee6;
   padding: 30px;
   border-radius: 10px;
   max-width: 600px;
   text-align: justify;
   font-size: 16px;
 }
-
 
 
 /*-------------------------------------------------------------------------*/
