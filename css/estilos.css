@@ -878,7 +878,133 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 
 
 
+/* Contenedor de la carta con perspectiva *//*Hecho con chatgpt*/
 
+.contenedor-cartas {
+  overflow: hidden;
+  width: 100%;
+}
+
+.cartas{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* Permite que los elementos bajen de línea */
+  flex-direction: row; /* Pone los elementos en filas horizontales */
+  width: 100%;
+  gap: 5px;/*Para que siempre haya espaciado entre las cartas*/
+}
+
+.contcarta{
+	perspective: 1000px;
+
+	width: 30%;
+	margin: auto;
+	height: auto;
+	padding: 15px 0px;
+}
+
+.carta{
+	position: relative;
+	width: 100%;
+	margin: auto;
+	height: auto;
+	padding: 170px 80px;
+	transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Al hacer clic se aplica esta clase para girar */
+.carta.volteada {
+  transform: rotateY(180deg);
+}
+
+/* Frente y reverso */
+.carta::before,
+.carta::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+/* Reverso (por defecto visible) */
+.carta::before {
+  background-color: #c0906b; /* reverso */
+}
+
+/*Frente (la imagen o símbolo de la carta) */
+.carta::after {
+  background-color: #000000; /* puedes usar imagen de fondo también */
+  transform: rotateY(180deg); /* escondido al inicio */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Imágenes diferentes según el data-pareja */
+.carta[data-pareja="1"]::after {
+  /*background-image: url('../images/ave1.jpg');*/
+}
+
+.carta[data-pareja="2"]::after {
+  background-image: url('../images/ave2.jpg');
+}
+
+.carta[data-pareja="3"]::after {
+  background-image: url('../images/ave3.jpg');
+}
+
+.carta[data-pareja="4"]::after {
+  background-image: url('../images/ave2.jpg');
+}
+
+.carta[data-pareja="5"]::after {
+  background-image: url('../images/ave3.jpg');
+}
+
+.carta[data-pareja="6"]::after {
+  background-image: url('../images/ave1.jpg');
+}
+
+.carta[data-pareja="7"]::after {
+  background-image: url('../images/ave2.jpg');
+}
+
+.carta[data-pareja="8"]::after {
+  background-image: url('../images/ave1.jpg');
+}
+
+.carta[data-pareja="9"]::after {
+  background-image: url('../images/ave3.jpg');
+}
+
+/*Popups para mensajes*//*Hecho con chatgpt*/
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-contenido {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: justify;
+  font-size: 16px;
+}
 
 
 
@@ -890,7 +1016,7 @@ nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 /*==========Agrupamiento==========*/
 
 [class*="col-"]{
-	/*border: 1px solid black; /*A esto solo se le pone 0px, si se borra se daña todo...*/
+	border: 1px solid black; /*A esto solo se le pone 0px, si se borra se daña todo...*/
 	}
 
 /*==============================*/
