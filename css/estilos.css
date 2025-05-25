@@ -309,13 +309,19 @@ a{
 	margin-right: auto;
 }
 
-/*Para que los botones queden centrados (especialmente los de los lados del logo)*/
-nav .col-lg-2, .col-lg-1{
+
+nav .col-lg-2, .col-lg-1{/*Este no sirve para nada*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+/*Para que los botones queden centrados (especialmente los de los lados del logo)*/
+.botoni{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 /*Animacion de botones*/
 .botoni:hover{
 	transform: scale(1.5);
@@ -467,7 +473,7 @@ nav .col-lg-2, .col-lg-1{
   gap: 20px;
   padding: 20px;
   border-radius: 10px;
-  
+
 }
 
 /*Elementos de la galeria*/
