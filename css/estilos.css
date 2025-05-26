@@ -222,6 +222,25 @@ nav{
 	color: #947850;
 }
 
+.contojos{/*Para expediente perdido*/
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	justify-content: center; /* centra horizontalmente*/
+	align-items: center; /* centra verticalmente*/
+
+}
+
+.ojos{/*Para expediente perdido*/
+	position: relative;
+	margin: auto;
+	height: auto;
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
 /*Subtitulo que pasaria si*/
 .subtituloq{
 	font-family: Bilbo Swash Caps;
