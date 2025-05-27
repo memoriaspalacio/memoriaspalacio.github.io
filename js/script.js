@@ -91,6 +91,9 @@ function inicializaracordeondos(){
 //Galeria slider de arrastrar (usando chatgpt) -------------------------------------------------------------
 
 function inicializargaleriaslider(){
+  /*Selecciona todos los elementos que tengan clase sliderq
+     para guardarlos como una lista (foreEach), con la variable temporal slider
+     recorre cada elemento*/
   document.querySelectorAll('.sliderq').forEach(slider => {
     let isDragging = false;
     let startX = 0;
@@ -173,28 +176,41 @@ function inicializarJuegoCartas() {
 
   // Función para reiniciar las cartas
   function reiniciarCartas() {
-    primeraCarta = null;
+    primeraCarta = null;/*En una condición el valor null se toma como falso*/
     segundaCarta = null;
     bloqueo = false;
   }
 
   // Función para mostrar el popup
   function mostrarPopup(pareja) {
+    /*También se puede 
+    'popup-' + pareja. El ${} es un template literals, 
+    Se usa dentro de comillas invertidas: ` `*/
+    
     const popup = document.getElementById(`popup-${pareja}`);
-    if (popup) popup.style.display = 'flex';
+    if (popup) popup.style.display = 'flex';/*se cambia la propiedad display del css para 
+    que aparezca la ventana emergente*/ 
   }
 
   // Función para cerrar todos los popups
   window.cerrarPopup = function () {
+    /*Selecciona todos los elementos que tengan clase popup
+     para guardarlos como un arreglo (foreEach), con la variable temporal p
+     recorre cada elemento y cambia la propiedad de display*/
     document.querySelectorAll('.popup').forEach(p => p.style.display = 'none');
   }
 
-  // Agregar eventos a todas las cartas
+  // Agrega evento click a todo lo que tenga la clase .carta
   document.querySelectorAll('.carta').forEach(carta => {
-    carta.addEventListener('click', () => {
+    carta.addEventListener('click', () => /* el ()=> es la funcion flecha
+    es como decir una función anonima*/{
+
+    /*Condicional que indica que si la carta esta volteada
+    o bloqueo = true retorna y no hace lo demas o si no hace la funcion*/
       if (bloqueo || carta.classList.contains('volteada')) return;
 
-      carta.classList.add('volteada');
+      carta.classList.add('volteada');/*Añade al elemento clickeado lo que tiene
+      las propiedades de esta clase */
 
       if (!primeraCarta) {
         primeraCarta = carta;
@@ -202,13 +218,18 @@ function inicializarJuegoCartas() {
         segundaCarta = carta;
         bloqueo = true;
 
+        /*dataset es una propiedad de los elementos del DOM en JavaScript 
+        que te permite acceder a los atributos personalizados 
+        que comienzan con data- en el HTML.
+        por ejemplo si tienes data-pareja en el html, 
+        puedes acceder con el js diciendo data.pareja*/  
         if (primeraCarta.dataset.pareja === segundaCarta.dataset.pareja) {
           const pareja = primeraCarta.dataset.pareja;
           setTimeout(() => {
             mostrarPopup(pareja);
-            reiniciarCartas();
+            reiniciarCartas();/*Reinicia las variables para poder seguir seleccionando cartas*/
           }, 600);
-        } else {
+        } else {/*El setTimeout es como un tipo de corrutina 1000 = 1 segundo*/
           setTimeout(() => {
             primeraCarta.classList.remove('volteada');
             segundaCarta.classList.remove('volteada');
